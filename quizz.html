@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Quizz</title>
+</head>
+<body>
+
+    <script>
+        //Program that checks if a NUmber is Even or not
+
+       
+        function evenNumber(NUm){
+            let y=NUm%2
+            if (y==0) {
+                
+                console.log(" Is an even Number");
+                
+            } else {
+                console.log(" It is odd");
+                
+            }
+        }
+
+        yourNum=prompt("Please enter a number!");
+        evenNumber (yourNum);
+
+
+//=====================================================
+        // THe Factorial
+//=====================================================
+        let numFact=prompt("Enter a number to have its factorial");
+        let result=1;
+        let counter=1;
+        let P=numFact;
+
+        if (numFact==0){
+                console.log("Factorial of " +numFact+ " is 1"  )
+            }
+        else{
+            while (counter  <= numFact){
+            result=result*P;
+            P=P-1;
+            counter+=1;
+
+           
+        }
+        console.log(result);
+
+        }
+     //===========================================  
+          //The fibonnaci SEries
+    //============================================    
+          let a=0,b=0,answers=b;
+          for(i=1;i<25;i++){
+            console.log(answers);
+            answers=a+b;
+            a=b;
+            b=answers;
+          }
+//===============================================
+        // the GCD of 2 numbers
+//==========================================================
+        let A=prompt("Enter first Value");
+        let B=prompt("Enter second Value"); 
+    
+    function gcd(){
+       if (A>B)$$ (A%B==0); {
+           console.log("the gcd is "+ B);
+
+       }
+       
+         
+    }
+
+    </script>
+    
+</body>
+</html>
