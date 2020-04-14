@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercises10h-12h</title>
+    <script>
+        function fact(nbr){
+            if(nbr === 0)
+            {
+                return 1;
+            }
+            return nbr * fact(nbr-1);
+        }
+        console.log(fact(3));
+
+        function pgcd(a,b){
+           let r=a;
+           do {
+               a = b;
+               b = (r % a)/2;
+           } while(b>0);
+
+           return a
+       }
+      console.log(pgcd(45,50));
+
+       function fibonacci(n){
+           if(n < 2){
+
+           return n;
+       }
+
+            return fibonacci(n-1) + 
+            fibonacci(n-2)
+       }  
+        console.log(fibonacci(8));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
