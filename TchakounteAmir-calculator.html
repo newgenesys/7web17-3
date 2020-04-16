@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment calculator</title>
+    <script >
+
+                // OPERATIONS AVEC JAVASCRIPT
+           
+        function multiplication(x,y) {
+            alert("multiplication result "+ x*y);
+        }
+        addition
+
+        function addition(x,y) {
+            alert("addition result "+ (x+y));
+        }
+        //    division
+           
+        function division(x,y) {
+            alert("division result "+ x/y);
+        }
+       
+        // substration
+           
+        function substraction(x,y) {
+            alert("substraction result "+ (x - y));
+        }
+    </script>
+    <style>
+        .btn {
+            text-decoration: none;
+            border: none;
+            margin: 10px;
+            padding: 15px 30px;
+            color: black;
+            transition-duration: 0.4s;
+            text-align: center;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 12px;
+
+
+        }
+
+        .add:hover {
+            background-color: rgb(124, 234, 238);
+            color: cornsilk;
+
+
+        }
+
+        .div:hover {
+            background-color: crimson;
+            color: whitesmoke;
+
+
+        }
+
+        .sub:hover {
+            background-color: lightgreen;
+            color: white;
+
+        }
+
+        .mult:hover {
+            background-color: rgb(165, 37, 250);
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Operations with JavaScript</h1>
+
+    <button class="btn add" onclick="alert('addition ');addition(Number(prompt('1er nombre')), Number(prompt('2e nombre')));">ADDITION</button>
+    <button class="btn div" onclick=" alert('division'); division(Number(prompt('1er nombre')), Number(prompt('2e nombre')));">DIVISION</button>
+    <button class="btn sub" onclick=" alert('substration');substraction(Number(prompt('1er nombre')), Number(prompt('2e nombre')));">SUBSTRACTION</button>
+    <button class="btn mult"onclick=" alert('multiplication');multiplication(Number(prompt('1er nombre')), Number(prompt('2e nombre')));">MULTIPLICATION</button>
+</body>
+
+</html> 
