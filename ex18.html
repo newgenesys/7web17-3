@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo18 seven learning</title>
+    <script>
+        // const square = function(x){
+        //     return x * x;
+        // };
+        // console.log(square(12));
+        // const makenoise = function(){
+        //     console.log("pling");
+        // };
+        // makenoise();
+
+        // const power = function(base,exponent) {
+        //     let result = 1;
+        //     for (let count = 0; count <exponent; count++){result *= base} 
+        //     return result;
+        //     };
+        //     var x =power(2,10);
+        // console.log(x);
+        // let result = 1;
+        // for(let count = 0; count<10;count++){
+        //     result*=2;
+
+        // console.log(result);}
+
+        // let x = 10;
+        // if(true){
+        //     let y =20;
+        //     var z =30;
+        //     console.log(x + y + z);
+        // }
+        // console.log(x + z);
+
+        //  const halve = function(n) {
+        //      return n/2;
+        //  };
+        //  let n = 10;
+        //  console.log(halve(100));
+        //  console.log(n);
+
+        // const hummus = function (factor) {
+        //     const ingredient = function (amount, unit, name) {
+        //         let ingredientAmount = amount * factor;
+        //         if (ingredientAmount > 1) {
+        //             unit += "s";
+        //         }
+        //         console.log(`${ingredientAmount} ${unit} ${name}`);
+        //     };
+        //     ingredient(1, "can", "chickpeas");
+        //     ingredient(0.25, "cup", "tahini");
+        //     ingredient(0.25, "cup", "garlic");
+        //     ingredient(1, "clove", "garlic");
+        //     ingredient(2, "tablespoon", "olive oil");
+        //     ingredient(0.5, "teaspoon", "cumin");
+        // };
+        // console.log(hummus(2));
+
+        //  let launchmissiles = function() {
+        //      missileSystem.launch("now");
+        // };
+        // launchMissiles();
+        // if (true) {
+        //     launchmissiles = function() {};
+        // };
+        // launchMissiles();
+
+        // let launchMissiles = function () {
+        //     console.log("Launching a missile");
+        // };
+
+        // launchMissiles(); //this line will print the message
+
+        // if (true) {
+        //     launchMissiles = function () {
+        //         /* doing nothing here */ };
+        // }
+
+        // launchMissiles(); //this line will not print anything to console because we replaced it with empty function
+
+        // console.log("the future says:", future());
+        //  function future() {
+        //      return "you will never have flying  cars "
+        //  }
+        // const power = (base, exponent) => {
+        //     let result = 1;
+        //     for (let count = 0; count < exponent; count++) {
+        //         result *= base;
+        //     }
+        //     return result;
+
+        // };
+        // console.log(power(2, 5));
+        // const horn = () => {
+        //     console.log("toot");
+        // }
+
+        // function greet(who) {
+        //     console.log("hello" + who);
+        // }
+        // greet(" harry");
+        // console.log("bye");
+
+        //  function chicken() {
+        //      return egg()
+        //  }
+        //  function eeg() {
+        //      return chicken ();
+        //  }
+        //  console.log(chicken()+ "came first.");
+
+        // function square(x) { return x*x;}
+        // console.log(square(4, true, "hedgehog"));
+        // function minus(a,b) {
+        //     if (b === undefined) return -a;
+        //     else return a - b;
+        // }
+        // console.log(minus(10));
+        // console.log(minus(10, 5));
+        // function power(base, exponent = 2) {
+        //     let result = 1;
+        //     for (let count = 0; count < exponent; count++) {
+        //         result *= base;
+
+        //     }
+
+        //     return result;
+
+        // }
+
+
+        // console.log(power(4));
+
+        // console.log(power(2, 6));
+
+        // function wrapValue(n) {
+        //     let local = n;
+        //     return () => local;
+        // }
+        // let wrap1 = wrapValue(1)
+        // let wrap2 = wrapValue(7)
+        // console.log(wrap1());
+        // console.log(wrap2());
+
+        // function multiplier(factor) {
+        //     return number => number * factor;
+        // }
+        // let twice = multiplier(2);
+        // console.log(twice(5));
+
+        // function recreate(n) {
+        //     return (x) => x;
+        // }
+
+        // function recreate(n) {
+        //     return (x) => x;
+        // }
+
+        // let recreate1 = recreate(1);
+        // let recreate2 = recreate(2);
+
+        // console.log(recreate1(11));
+        // console.log(recreate2(12));
+        // function recreate(n) {
+        //     return (x) => x * n;
+        // }
+
+        // let recreate1 = recreate(1);
+        // let recreate2 = recreate(2);
+
+        // console.log(recreate1(11));
+        // console.log(recreate2(12));
+           
+           // recursion
+
+        function power (base, exponent) {
+            if (exponent == 0) {
+                return 1;
+            } else {
+                return base * power(base, exponent -1);
+            }
+        }
+        console.log (power(2, 5));
+        function findSolution(target) {
+            function find(current, history) {
+                if (current == target) {
+                    return history;
+                }else if (current > target) {
+                    return null;
+                } else {
+                    return find(current + 5, `(${history} + 5)`)||
+                    find(current * 3, `(${history})*3`);
+                }
+                    
+            }
+            return find(1, "1");
+            }
+            console.log(findSolution(24));
+        
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
