@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PGCD</title>
+	<script type="text/javascript">
+		function pgcd(a,b){
+			while(a!=b){
+				if(a>b)
+					a-=b;
+				else
+					b-=a;
+			}
+			return a;
+		}
+		var x=prompt("entrez le first number", "");
+		var y=prompt("entrez le second number", "");
+		var z=pgcd(x,y);
+		    alert("PGCD ("+x+" , "+y+")=  " +z); 
+		    alert("thank for using");  
+	</script>
+</head>
+<body>
+
+</body>
+</html>
