@@ -1,2 +1,0 @@
-https://lms.seven-elearning.com/
-https://lms.seven-elearning.com/plugin/bbb/start.php?launch=1&cidReq=FULLSTACKWEBDEVELOPMENT&id_session=0&gidReq=0
