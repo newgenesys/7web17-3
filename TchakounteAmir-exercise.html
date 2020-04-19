@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise</title>
     <script>
         // factorielle
+        alert("factorielle");
+
         function factoriel(numb) {
-            var x, numb, y= 1;
-            for(x = 1; x<= numb; x++) {
-                y = y*x;
+            var x, numb, y = 1;
+            for (x = 1; x <= numb; x++) {
+                y = y * x;
             }
             return y;
         }
         console.log(factoriel(parseInt(prompt("pick a number for factor"))));
-        
+
         // fibonacci
 
         function fibonacci(thenumber) {
             if (thenumber < 2) {
                 return thenumber;
             }
-            return fibonacci(thenumber - 1) + fibonacci(thenumber-2);
+            return fibonacci(thenumber - 1) + fibonacci(thenumber - 2);
         }
-        console.log(fibonacci(parseInt(prompt("pick a number for factor"))));
+        alert("fibonacci");
+        console.log(fibonacci(parseInt(prompt("pick a number for fibonacci"))));
 
         // pair and unpair
         function verify(chiffre) {
-            return (chiffre%2 == 0) ? "ceci est pair" : "ceci est impair";
+            return (chiffre % 2 == 0) ? "ceci est pair" : "ceci est impair";
         }
-     document.write(verify(prompt("numero")));
-        
+        alert("calcul de parite");
+        document.write(verify(prompt("pick a number to verify the parity")));
+
         // PGCD
-        
-        
-        
+        function PGCD(x, y) {
+            while (x != y) {
+                if (x > y) {
+                    x -= y;
+                } else {
+                    y -= x;
+                }
+            }
+            return x;
+        }
+        alert("calcul du pgcd");
+        console.log(PGCD(Number(prompt("1st number")), Number(prompt("2nd number"))));
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
