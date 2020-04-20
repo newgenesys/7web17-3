@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <script>
+            function calculator() {
+                function addition(param1, param2, operator) {
+                 return param1 + param2;
+                }
+                function subtraction(param1, param2) {
+                 return param1 - param2;
+
+             }
+                function multiplication(param1, param2) {
+                 if (param1 ==0) {
+                     return 0;
+                 } else if(param2 ==0) {
+                     return 0;
+                 }else {
+                     return param1 * param2;
+                 }
+             }
+             function division(param1, param2) {
+                 if (param1 ==0){
+                     return 0;
+                 } else if(param2 ==0) {
+                 return "Syntax Error";
+                 } else{
+                     return param1 / param2;
+                 }
+             }
+             
+                if(operator == "+"){
+                    return addition(param1,param2);
+                }
+                else if(operator == "-"){
+                    return subtraction(param1, param2);
+                }
+                else if(operator == "*"){
+                    return multiplication(param1, param2);
+                }
+                else if(operator == "/"){
+                    return division(param1, param2);
+                }
+                else{
+                  
+                    console.log("Please put in the right operator");
+                }
+                
+
+
+            }
+            param1 = Number(prompt("Please Enter Your First Calculation Parameter?"));
+            
+            operator= prompt("Please Enter Your Operator Sign (+, -, *, /)");
+
+            param2 = Number(prompt("Please Enter Your Second Calculation Parameter?"));
+
+            console.log(calculator());
+            
+
+
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+
+       
+    </body>
+</html>
