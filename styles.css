@@ -1,0 +1,27 @@
+root{
+font-family: cursive;
+}
+
+h1 {
+    color: red;
+}
+button{
+    background-color: black;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    padding: 0.25rem 0.5rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: 10%;
+}
+div.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+button:hover{
+    background-color: white;
+    color: #000;
+}
+p{
+    font-size: 1.5rem;
+}
