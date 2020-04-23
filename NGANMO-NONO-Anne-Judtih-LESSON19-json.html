@@ -102,8 +102,8 @@ if (typeof module != "undefined" && module.exports && (typeof window == "undefin
   module.exports = JOURNAL;
 if (typeof global != "undefined" && !global.JOURNAL)
   global.JOURNAL = JOURNAL;
-
-console.log( JSON.stringify(JOURNAL));
+var myJsonJournal = JSON.stringify(JOURNAL);
+console.log( myJsonJournal);
 	</script>
 </head>
 <body>
