@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    padding-bottom: 50px;
+}
+p{
+    text-align: center;
+    padding-bottom: 25px;
+}
+.container{
+    text-align: center;
+    padding: 80px;
+    background-color: rgb(123, 73, 170);
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+button{
+    padding: 15px;
+    border-radius: 5px;   
+}
+body{
+    background-color: rgb(18, 5, 31);
+}
