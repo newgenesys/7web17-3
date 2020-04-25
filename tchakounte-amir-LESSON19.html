@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>less19-execise</title>
     <script>
-        let JOURNAL = JSON.stringify ({
+        let JOURNAL = JSON.stringify([{
                 "events": ["carrot", "exercise", "weekend"],
-                "squirrel": false },
-             
-               {"events": ["bread", "pudding", "brushed teeth", "weekend", "touched tree"],
                 "squirrel": false
-               },
-            
-               { "events": ["carrot", "nachos", "brushed teeth", "cycling", "weekend"],
+            },
+            {
+                "events": ["bread", "pudding", "brushed teeth", "weekend", "touched tree"],
                 "squirrel": false
-        },
+            },
+            {
+                "events": ["carrot", "nachos", "brushed teeth", "cycling", "weekend"],
+                "squirrel": false
+            },
             {
                 "events": ["brussel sprouts", "ice cream", "brushed teeth", "computer", "weekend"],
                 "squirrel": false
@@ -365,10 +366,19 @@
                 "events": ["cauliflower", "peanuts", "brushed teeth", "weekend"],
                 "squirrel": false
             }
-        );
+        ]);
 
-            console.log(JOURNAL)
-            console.log(JSON.parse(JOURNAL).events);
+        // This makes sure the data is exported in node.js —
+        // `require('./path/to/jaques_journal.js')` will get you the array.
+        if (typeof module != "undefined" && module.exports && (typeof window == "undefined" || window.exports !=
+                exports))
+            module.exports = JOURNAL;
+        if (typeof global != "undefined" && !global.JOURNAL)
+            global.JOURNAL = JOURNAL;
+
+    //    let journaljson = JSON.stringify(JOURNAL)
+        console.log(JOURNAL)
+        console.log(JSON.parse(JOURNAL).events);
     </script>
 </head>
 
