@@ -15,23 +15,9 @@
             //Step1
             // Strigify the JOURNAl to obtain a string which we can manipulate;
             let String_journal = JSON.stringify(JOURNAL);
-
-            //Step2: Split out the "{" found before the events which converts it to an array, then join them back using empty whitespaces.
-            let Split_curleybracket1 = String_journal.split("{").join("");
-            
-            //Step2: Split out the "}" found before the events which converts it to an array, then join them back using empty whitespaces.
-            let Split_curleybracket2 = Split_curleybracket1.split("}").join("");
-            let Split_curleybracket3 = Split_curleybracket2 .split(",").join(", ");
-
-            // Step 3: Splice out the "[" at the begining and "]" end of the JOURNAL
-            let Splice_anglebracket = Split_curleybracket3.slice(1, 6759);
-            //Step 4: Concatenate the "{" with the previous string
-            let First_Concatenation = "{ " + Splice_anglebracket;
-            let Second_Concatenation = First_Concatenation + " }";
-            let Journal_Object = JSON.parse(Second_Concatenation)
-            // return Second_Concatenation;
+            let Journal_Object = JSON.parse(String_journal)
             return Journal_Object;
-        }
+        }git 
         console.log(Converter(JOURNAL));
     </script>
 
