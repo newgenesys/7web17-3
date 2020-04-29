@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./SCRIPTS.JS"></script>
+    <title>lecon20</title>
+    <script>
+         let total = 0, count = 1;
+         while (count <= 10){
+            total += count;
+             count += 1;
+         }
+         console.log(total);
+
+        //  console.log(sum(range(1,10)));
+
+        for(let i = 0; i < 10 ; i ++){
+            console.log(i);
+        }
+
+        function repeatlog(n){
+            for (let i = 0; i < n; i++){
+                console.log(i);
+            }
+        }
+        function repeat(n,action){
+            for(let i = 0 ; i < n; i ++){
+                action(i);
+            }
+        }
+        repeat(3,console.log);
+
+         let labels = [];
+         repeat(5,i => {
+             labels.push(`unit $ { i + 1}`);
+         });
+         console.log(labels);
+
+         function greaterThan(n){
+             return m => m > n;
+         }
+          let greaterThan10 = greaterThan(10);
+          console.log(greaterThan10(11));
+
+          function noisy(f){
+              return (...args) => {
+                  console.log("calling with",args);
+                  let result = f (...args);
+                  console.log("called with",args,",returned",result);
+                  return result;
+              };
+          }
+          noisy(Math.min)(3,2,1);
+
+          function unless (test, then) {
+            if(!test)then();
+            }
+
+            repeat(3, n => {
+                unless(n % 2 == 1, () => {
+                    console.log(n, "is even");
+                });
+            });
+            ["A","B"].forEach(l => console.log(l));
+
+            function filter(array, test){
+                let passed = [];
+                for(let element of array){
+                    if (test(element)){
+                        passed.push(element);
+                    }
+                }
+                return passed;
+            }
+            console.log(filter(SCRIPTS,script => script.living));
+            console.log(SCRIPTS.filter(s => s.direction == "ttb"));
+            function map(arrey,transform){
+                let mapped = [];
+                for(let element of arrey){
+                    mapped.push(transform(element));
+                }
+                return mapped;
+            }
+            let rtlScripts = SCRIPTS.filter(s => s.direction == "rtl");
+            console.log(map(rtlScripts, s => s.name));
+
+            function reduce(array,combine,start){
+                let current = start;
+                for (let element of array) {
+                    current = combine(current,element);
+                }
+                return current;
+            }
+            console.log(reduce([1,2,3,4],(a,b) => a + b,0));
+            function CharacterCount(script){
+                return script.ranges.reduce((count,[from,to]) =>{
+                    return count + (to - from);
+                },0);
+            }
+            console.log(SCRIPTS.reduce((a,b) => {
+                return CharacterCount(b) ? b : a;
+            }));
+              let biggest = null;
+            for(let script of SCRIPTS){
+                if(biggest == null ||
+                CharacterCount(biggest) < CharacterCount(script)){
+                    biggest = script;
+                }
+            }
+            console.log(biggest);
+
+            function average(array){
+                return array.reduce((a,b) => a + b)/ array.length;
+            }
+            console.log(Math.round(average(
+            SCRIPTS.filter(S => S.living).map(s => s.year))));
+            console.log(Math.round(average(
+                SCRIPTS.filter(s => !s.living).map(s => s.year))));
+
+                let sum = 0 , caunt = 0;
+            for (let script  of SCRIPTS) {
+                if(script.living){
+                    sum += script.year;
+                    caunt += 1;
+                }
+            }
+            console.log(Math.round(sum / caunt));
+            function CharacterScript(code){
+                for(let script of SCRIPTS){
+                    if(script.ranges.some(([from, to]) =>{
+                        return code >= from && code < to;
+                    })){
+                        return script;
+                    }
+                }
+                return null;
+            }    
+            console.log(CharacterScript(121));
+            //two emoji characters, horse and shoe
+            let horseShoe = "🐴👟";
+            console.log(horseShoe.length);
+            console.log(horseShoe[0]);
+            console.log(horseShoe.charCodeAt(0));
+            console.log(horseShoe.codePointAt(0));
+            let roseDragon = "🌹🐲";
+            for(let char of roseDragon){
+                console.log(char);
+            }
+
+            function countBy(items, groupName){
+                let counts = [];
+                for (let item of items){
+                    let name = groupName(item);
+                    let known = counts.findIndex(c => c.name == name);
+                    if (known == -1) {
+                        counts.push({name,count: 1});
+                    } else{
+                        counts[known].count++;
+                    }
+                    
+                }
+                return counts;
+            }
+            console.log(countBy([1,2,3,4,5], n => n > 2));
+            // exercise: commenter le code suivant tout en donnant une explication approprier au code
+
+
+
+
+              // le nom de cette function est testScript c est une function qui nous permet decalculer en pourcentage le type de text utiliser dans le journal
+         function textScripts(text){
+             // ici on affecte a script une fonction suplementaire nomer countBy qui lui contiendra un text et des chaine de charactere
+                let scripts = countBy(text, char => {
+            // dans le sous corps de notre function on declare encore une variable appeller script a qui on affecte une valeur nommer characterscript pour attribuer un nom au caractere de le function
+                    let script = CharacterScript(char.codePointAt(0));
+            //et le reultat sera none pour des caractere qui ne font pas partie des scripts
+                    return script ? script.name : "none";
+                }).filter(({name}) => name != "none");
+            // ici c est le montant total des caracteres appartenant a un script pour calculer cela on a besoin .reduice et si aucun caractere n est trouver la chaine renvoie une chaine specifique
+                let total = scripts.reduce((n,{count}) => n +  count,0);
+                if(total == 0) return "No script found";
+            // ou alors il transforme les entrees de comptage chaine lisibles avec mapper puis les combines avec .join
+                return scripts.map(({name,count}) => {
+                    return`${Math.round(count * 100 / total)}% ${name}`;
+                }).join(",");
+            }// et la le resultat nous affichera le nombre total de chaque type de texte qu'il y'a dans le journal
+            console.log(textScripts('花开堪折直需折"woof",人算不如天算"'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
