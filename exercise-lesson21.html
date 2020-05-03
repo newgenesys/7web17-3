@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise-lesson-21</title>
     <script>
-        function vector(x, y) {
+        function Vec(x, y) {
             this.x = x;
             this.y = y;
         }
-        vector.prototype.plus = function(vector) {
-            return new vector(this.x + vector.x, this.y + vector.y)
+        Vec.prototype.plus = function(vec) {
+            return new Vec (this.x + vec.x, this.y + vec.y)
         }
-        vector.prototype.minus = function(vector) {
-            return new vector(this.x - vector.x, this.y - vector.y)
+        Vec.prototype.minus = function(vec) {
+            return new Vec(this.x - vec.x, this.y - vec.y)
         }
-       console.log(new vector(2, 3).plus(new vector(4, 5)));
-
+       console.log(new Vec(2, 3).plus(new Vec(4, 5)));
+       console.log(new Vec(2, 3).minus(new Vec(4, 5)));
        
     </script>
 </head>
