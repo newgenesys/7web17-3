@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-lesson-21</title>
+    <script>
+        function vector(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        vector.prototype.plus = function(vector) {
+            return new vector(this.x + vector.x, this.y + vector.y)
+        }
+        vector.prototype.minus = function(vector) {
+            return new vector(this.x - vector.x, this.y - vector.y)
+        }
+       console.log(new vector(2, 3).plus(new vector(4, 5)));
+
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
