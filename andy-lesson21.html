@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-lesson-21</title>
+    <script>
+        //exercice 1
+        class Vec{constructor(x,y){
+                this.x = x;
+                this.y = y;
+        } 
+        plus(add){
+            return new Vec(this.x + add.x, this.y + add.y)
+        }
+        minus(sous){
+            return new Vec(this.x - sous.x, this.y - sous.y)
+        }get length () {
+           return Math.sqrt(Math.pow(this.x,2) + Math.pow(this.y,2));
+        }
+        }
+        console.log(new Vec(2,4).plus(new Vec(4,6)));
+        console.log(new Vec(5,2).minus(new Vec(8,5)));
+        console.log(new Vec(4,3).length);
+    </script>
+</head>
+<body>
+    <script>
+        //exercise 2
+        class Group {
+            constructor(){
+                this.members = [];
+            }
+
+add(value){
+    if(this.has(value)){
+        this.members.push(value);
+    }
+}
+delete(value){
+    this.members = this.members.filter(v => v !==value);
+}
+has(value){
+    return this.members.includes(value);
+}
+static from(collection){
+    let group = new Group;
+    for(let value of collection){
+        group.add(value);
+    }
+    return group;
+}
+}
+
+
+let group = Group.from([10, 20]);
+console.log(group.has(10));
+console.log(group.has(30));
+group.add(10);
+group.delete(10);
+console.log(group.has(10));
+
+    </script>
+    
+</body>
+</html>
