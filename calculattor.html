@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function displaynumb(fig)
+        { 
+            calcform.result.value=fig;
+
+        }
+    </script>
+</head>
+<body> 
+<form name=calcform style="width: 10%;height: auto;">
+   <div style="background-color: red"> <input type="text" name="result" style="text-align: right;"><br>
+    <input type="button" name="btn0" value="0" onclick="displaynumb(btn0.value)" style=width:30px;height: 30px;>
+    <input type="button" name="btn1" value="1" onclick="displaynumb(btn1.value)"style=width:30px;height: 30px;>
+    <input type="button" name="btn2" value="2" onclick="displaynumb(btn2.value)"style=width:30px;height: 30px;>
+    <input type="button" name="btn3" value="3" onclick="displaynumb(btn3.value)"style=width:30px;height: 30px;><br>
+    <input type="button" name="btn4" value="4" onclick="displaynumb(btn4.value)"style=width:30px;height: 30px;>
+    <input type="button" name="btn5" value="5" onclick="displaynumb(btn5.value)"style=width:30px;height: 30px;>
+    <input type="button" name="btn6" value="6" onclick="displaynumb(btn6.value)"style=width:30px;height: 30px;>
+    <input type="button" name="btn7" value="7" onclick="displaynumb(btn7.value)"style="width:30px;height: 30px;"><br>
+    <input type="button" name="btn8" value="8" onclick="displaynumb(btn8.value)"style=width:30px;height: 30px;>
+    <input type="button" name="btn9" value="9" onclick="displaynumb(btn9.value)"style=width:30px;height: 30px;>
+    <input type="button" name="addbtn" value="+" onclick="displaynumb(addbtn.value)"style=width:40px;height: 40px;>
+    <input type="button" name="subbtn" value="-" onclick="displaynumb(subbtn.value)"style=width:40px;height: 40px;><br>
+    <input type="button" name="multbtn" value="*" onclick="displaynumb(multbtn.value)"style=width:40px;height: 40px;>
+    <input type="button" name="divbtn" value="/" onclick="displaynumb(divbtn.value)"style=width:40px;height: 40px;>
+    <input type="button" name="dotbtn" value="." onclick="displaynumb(dottbtn.value)"style=width:40px;height: 40px;>
+    <input type="button" name="equaltbtn" value="=" onclick="calculate(equalbtn.value)"style=width:40px;height: 40px;>
+    </div>
+    
+</form>
+	
+</body>
+</html>
