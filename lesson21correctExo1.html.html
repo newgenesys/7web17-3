@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>distance vec livingstone</title>
+	<script type="text/javascript">
+		class Vec{
+			constructor(x,y) {
+				this.x = x;
+				this.y = y;
+			}
+			plus(som){
+				return new Vec(this.x + som.x , this.y + som.y);
+			}
+			minus(rest){
+				return new Vec(this.x - rest.x , this.y - rest.y);
+			}
+			get length(){
+				return Math.hypot(this.x, this.y);
+			}
+  			
+		}
+		
+		let first = new Vec(4, 5);
+		let second = new Vec(6, 7);
+		console.log(first.plus(second));
+		console.log(first.minus(second));
+		console.log(second.length);
+	</script>
+</head>
+<body> 
+	<h4>les vecteurs en Javascript</h4> <br>
+	 
+
+</body>
+</html>
