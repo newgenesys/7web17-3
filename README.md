@@ -32,3 +32,8 @@ Submission by GitHub
 ### Clone the repo with git clone  and open the html file 'honorezemagho-lesson-19-json'
 
 ### To access it, just open the console and you will see the output or to access it outside the console, use the variable (newJournal)
+
+# Robot (Type and Run)
+
+## Simple Robot who deliver packages with efficient and more efficient method. Run robot.html and see the console
+
