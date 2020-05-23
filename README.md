@@ -22,3 +22,13 @@ Submission by GitHub
 ### 3.) Write a JavaScript program to get the first n Fibonacci numbers. Note : The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, . . . Each subsequent number is the sum of the previous two.
 
 ### 4.) Write a JavaScript program to check whether a number is even or not.
+
+
+
+# Exercise 19-JSON : convert the JOURNAL array
+
+## Turn the journal file into json format
+
+### Clone the repo with git clone  and open the html file 'honorezemagho-lesson-19-json'
+
+### To access it, just open the console and you will see the output or to access it outside the console, use the variable (newJournal)
