@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal to JSON</title>
+</head>
+
+<body>
+    <script src="journaldata.js."></script>
+    <script>
+        // This fuction will do the following as explained with the comments:
+        function Converter(JOURNAL) {
+            //Step1
+            // Strigify the JOURNAl to obtain a string which we can manipulate;
+            let String_journal = JSON.stringify(JOURNAL);
+            let Journal_Object = JSON.parse(String_journal)
+            return Journal_Object;
+        }
+        console.log(Converter(JOURNAL));
+    </script>
+
+</body>
+
+</html>

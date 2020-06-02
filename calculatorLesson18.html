@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic calculator</title>
+</head>
+
+<body>
+    <script>
+        // Addition function
+       function Addition (x,y,z){
+            if (Number.isNaN(x,y,z)){
+                return "Please input a number!!"
+            }
+            else { 
+                return (`${x + z + y} = ${x + y}`);
+            }
+        }
+        let x = Number(prompt("Please input the first number: "));
+        let y = Number(prompt("Please input the second number: "));
+        let z = "+";        
+        console.log(Addition(x,y,z))
+
+        // function Subtraction (x,y,z){
+            if (Number.isNaN(x,y,z)){
+                return "Please input a number!!"
+            }
+            else { 
+                return (`${x + z + y} = ${x - y}`);
+            }
+        }
+        let x = Number(prompt("Please input the first number: "));
+        let y = Number(prompt("Please input the second number: "));
+        let z = "-";        
+        console.log(Subtraction(x,y,z))
+
+
+        //Multiplication function
+        function Multiplication (x,y,z){
+            if (Number.isNaN(x,y,z)){
+                return "Please input a number!!"
+            }
+            else { 
+                return (`${x + z + y} = ${x * y}`);
+            }
+        }
+        let x = Number(prompt("Please input the first number: "));
+        let y = Number(prompt("Please input the second number: "));
+        let z = "*";        
+        console.log(Multiplication(x,y,z))
+    
+
+        //Division function
+       function Division(x,y,z){
+            if (Number.isNaN(x,y,z)){
+                return "Please input a number!!"
+            }
+            else { 
+                return (`${x + z + y} = ${x / y}`);
+            }
+        }
+        let x = Number(prompt("Please input the first number: "));
+        let y = Number(prompt("Please input the second number: "));
+        let z = "/";        
+        console.log(Division(x,y,z))
+    </script>
+</body>
+</html>
