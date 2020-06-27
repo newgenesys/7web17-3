@@ -1,0 +1,5 @@
+[0514/141031.461:ERROR:process_reader_win.cc(151)] SuspendThread: Accès refusé. (0x5)
+[0514/141031.509:ERROR:process_reader_win.cc(151)] SuspendThread: Accès refusé. (0x5)
+[0514/141031.509:ERROR:exception_snapshot_win.cc(98)] thread ID 1948 not found in process
+[0514/141031.605:ERROR:process_reader_win.cc(151)] SuspendThread: Accès refusé. (0x5)
+[0514/141031.605:ERROR:exception_snapshot_win.cc(98)] thread ID 3900 not found in process

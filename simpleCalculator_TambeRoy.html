@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <script>
+        function addition(Num1,Num2) {
+            return Num1+Num2;
+            
+        }
+
+        function subtraction(Num1,Num2) {
+            return Num1-Num2;
+            
+        }
+
+        function multiplication(Num1,Num2) {
+            return Num1*Num2;
+            
+        }
+
+        function division(Num1,Num2) {
+            return Num1/Num2;
+            
+        }
+
+        function operator(Num1,Num2,mathOp){
+            if (mathOp==="*"){
+                return multiplication(Num1,Num2);
+            } else if (mathOp==="+"){
+                return addition(Num1,Num2);
+            }else if (mathOp==="/"){
+                return division(Num1,Num2)
+            }else if (mathOp==="-"){
+                return subtraction(Num1,Num2)
+
+            }else {
+                prompt("Please enter a valid operator  +,*,-,/");
+            }
+                
+        }
+
+        var calc= operator(3,5,"+");
+        console.log(calc);
+
+        var calc= operator(3,5,"*");
+        console.log(calc);
+
+        var calc= operator(3,5,"/");
+        console.log(calc);
+
+        var calc= operator(3,5,"-");
+        console.log(calc);
+
+        
+
+       let num1=prompt("Enter first Number");
+       let oP=prompt("Enter operator");
+       let num2=prompt("Enter second Number");
+
+       let answer=alert(operator(num1,num2,oP));
+       
+        
+
+    </script>
+    
+</body>
+</html>
