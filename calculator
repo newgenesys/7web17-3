@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script>
+		console.log("calculator :");
+function calculator(number1, number2, operator) {
+    switch (operator) {
+        case '+':
+            function addition(number1, number2) {
+                console.log("addition");
+                return number1 + number2;
+            }
+            return addition(number1, number2);
+            break;
+        case '-':
+            function soustration(number1, number2) {
+                console.log("soustration");
+                return number1 - number2;
+            }
+            return soustration(number1, number2);
+            break;
+        case '*':
+         function multiplication(number1, number2) {
+                console.log("multiplication");
+                return number1 * number2;
+            }
+            return multiplication(number1, number2);
+            break;
+        case '/':
+            function division(number1, number2) {
+                console.log("division");
+                return number1 / number2;
+            }
+            return division(number1, number2);
+            break;
+        default:
+            return "error";
+    }
+}
+        console.log(calculator(3, 4, 2));
+        console.log(calculator(3,4, '*'));
+        console.log(calculator(15,5, '-'));
+        console.log(calculator(25, 5, '/'));
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
