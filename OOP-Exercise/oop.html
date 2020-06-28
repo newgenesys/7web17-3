@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Object Oriented Programming</title>
+        <script>
+            class Vector {
+                constructor (x, y) {
+                    this.x = x;
+                    this.y = y;
+                }
+             plus (vector) {
+                    return new  Vector (this.x + vector.x, this.y + vector.y);
+                }
+                 minus (vector){
+                    return new Vector(this.x - vector.x,  this.y - vector.y);
+                }
+                get length() {
+                    return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+                }
+
+                
+            }
+
+            console.log(new Vector(2,3).plus(new Vector(4,5)));
+            console.log(new Vector(5,6).minus(new Vector(7,8)));
+            console.log(new Vector(3,2).length);
+            /*let Vector1 = new Vector(2, 3);
+            let Vector2 = new Vector(3, 2);
+
+            console.log(Vector1.plus);
+            console.log(Vector2.minus);*/
+
+
+
+            class Group {
+                constructor(){
+                    this.member = [];
+                }
+                add(name) {
+                    if(!this.member.includes(name)){
+                        this.member.push(name);
+                    }
+                }
+                delete(name){
+                    this.member = this.member.filter(v => v !== name);
+                }
+                has(name){
+                    return this.member.includes(name);
+
+                }
+                static from (iterable) {
+                    let group = new Group;
+                    for(let name of iterable){
+                        group.add(name);
+                    }
+                    return group;
+                }
+            }
+            //console.log(Group.member);
+            let group = Group.from([10, 12, 14]);
+            console.log(group.has(10));
+            console.log(group.add(16));
+            console.log(group.has(16));  
+        </script>
+    </head>
+    <body>
+        <h1>Object Oriented Programming</h1>
+
+    </body>
+</html>
