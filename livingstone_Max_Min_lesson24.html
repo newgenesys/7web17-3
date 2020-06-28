@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MAX</title>
+	<script type="text/javascript">
+		function max(nbr){
+			return nbr.reduce(function(x,y){
+				return(x>y? x: y);
+			});
+		}
+
+
+		function min(nbr){
+			return nbr.reduce(function(x,y){
+				return(x<y? x: y);
+			});
+		}
+
+		console.log("le max est: " + (max([1,2,3,5])));
+		console.log("le min est: " + min([1,2,3,5]));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

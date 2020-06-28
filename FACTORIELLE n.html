@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fonct_facto</title>
+	<script type="text/javascript">
+		function factorielle(n){
+			if (n==0)
+				return 1;
+			else
+				return n*factorielle(n-1);
+		}
+		let k=prompt("entrez la valeur du parametre n");
+		let p=factorielle(k);
+		alert("factorielle(" + k + ")=" +p);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

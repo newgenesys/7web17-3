@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lesson20</title>
+	<script type="text/javascript">
+		function textScripts(text){
+			//.countBy() function is used to sort a list into groups and returns a count for the number of objects in each group.
+			let scripts= countBy(text, char =>{
+				let script= characterScript(char.codePointAt(0));
+				return script? script.name : "none";
+				// filter a collection based on a predicate provided by a function it takes as arguments
+			}).filter(({name}) => name != "none");
+			//prend en argument une fonction qui prend elle-même deux arguments et retourne une valeur. 
+
+			let total= scripts.reduce((n, {count})=> n + count, 0);
+			if (total==0)return "no scripts found";
+			//the function map will take as argument a function which will allow us to create a whole new collection whith an already existing collection
+
+			return script.map(({name, count}) =>{
+				return '${Math.round(count * 100 / total)}% ${name}';
+				//.join will allow us to reate and return a new character string by concatenating all the element
+			}).join(","),
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

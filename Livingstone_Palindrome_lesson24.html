@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>palindome</title>
+	<script type="text/javascript">
+		
+		function palindrome(world){
+
+			let remplace = world.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+			let test = remplace.split("").reverse().join("");
+			if(remplace === test)
+				return("c'est un palindrome");
+			else
+				return("it's not a palindrome");
+		}
+
+		let k =prompt("entrez un mot ou un number");
+		let p = palindrome(k);
+
+		alert(p);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

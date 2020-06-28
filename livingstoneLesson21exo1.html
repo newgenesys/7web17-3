@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vector</title>
+	<script type="text/javascript">
+		class vect{
+			constructor(x,y){
+				this.x = x;
+				this.y = y;
+			/*
+			vec.prototype.plus = class(vec) {
+                return new vect(this.x + vect.x , this.y + vect.y)
+            }
+            vec.protoype.munis = class(vect){
+                return new vect(this.x - vect.x , this.y - vect.y)
+            }
+            object.definePropety(vect.prototype, "length", {
+            	get: function(){
+            		return math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2))
+            	}
+            });*/
+            	
+	
+			}
+			static distance(a,b){
+				let dx = a.x - b.x;
+				let dy = a.y - b.y;
+				return Math.hypot(dx,dy);
+			}
+		}
+		let vect1 = new vect(8,2),
+		    vect2 = new vect(5,6);
+
+		  console.log(vect.distance(vect1 , vect2));
+	</script>
+</head>
+<body>
+
+</body>
+</html>
